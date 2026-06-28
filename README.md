@@ -1,6 +1,6 @@
 # FIFA World Cup Stats Dashboard
 
-A one-page web app that loads public FIFA World Cup 2022 match data and displays a compact stats dashboard with:
+A one-page web app that loads public FIFA World Cup 2026 match data and displays a compact stats dashboard with:
 
 - tournament summary cards
 - team standings with wins, draws, losses, goals, goal difference, and points
