@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIFA World Cup Stats Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Live from public tournament data</p>
+          <h1>FIFA World Cup Stats Dashboard</h1>
+          <p class="hero-copy">
+            Explore the 2022 tournament at a glance with match totals, team form,
+            and the leading scorers.
+          </p>
+        </div>
+        <div class="status-card" id="status-card">
+          <span class="status-dot"></span>
+          <span id="status-text">Loading tournament data…</span>
+        </div>
+      </header>
+
+      <section class="stats-grid" aria-label="Tournament overview">
+        <article class="card stat-card">
+          <p class="label">Tournament</p>
+          <h2 id="tournament-name">—</h2>
+        </article>
+        <article class="card stat-card">
+          <p class="label">Matches</p>
+          <h2 id="match-count">—</h2>
+        </article>
+        <article class="card stat-card">
+          <p class="label">Goals</p>
+          <h2 id="goal-count">—</h2>
+        </article>
+        <article class="card stat-card">
+          <p class="label">Top scorer</p>
+          <h2 id="top-scorer">—</h2>
+        </article>
+      </section>
+
+      <section class="card">
+        <div class="section-heading">
+          <h3>Team standings</h3>
+          <p>Points are awarded as 3 for a win and 1 for a draw.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Team</th>
+                <th>MP</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>GF</th>
+                <th>GA</th>
+                <th>GD</th>
+                <th>Pts</th>
+              </tr>
+            </thead>
+            <tbody id="standings-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
