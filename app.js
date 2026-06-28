@@ -1,15 +1,15 @@
 const TOURNAMENT_URL =
-  'https://raw.githubusercontent.com/openfootball/world-cup.json/master/2022/worldcup.json';
+  'https://raw.githubusercontent.com/openfootball/world-cup.json/master/2026/worldcup.json';
 
 const FALLBACK_DATA = {
-  name: 'World Cup 2022',
+  name: 'World Cup 2026',
   matches: [
     {
-      team1: 'Argentina',
-      team2: 'France',
-      score: { ft: [3, 3] },
-      goals1: [{ name: 'Messi', minute: 108 }],
-      goals2: [{ name: 'Mbappé', minute: 118 }],
+      team1: 'United States',
+      team2: 'Mexico',
+      score: { ft: [2, 1] },
+      goals1: [{ name: 'Christian Pulisic', minute: 45 }],
+      goals2: [{ name: 'Hirving Lozano', minute: 70 }],
     },
   ],
 };
@@ -151,8 +151,8 @@ async function loadTournamentData() {
     updateStatus('Using fallback sample data', true);
     tournamentName.textContent = FALLBACK_DATA.name;
     matchCount.textContent = FALLBACK_DATA.matches.length;
-    goalCount.textContent = '6';
-    topScorer.textContent = 'Lionel Messi (1)';
+    goalCount.textContent = '3';
+    topScorer.textContent = 'Christian Pulisic (1)';
     renderStandings(buildTeamStats(FALLBACK_DATA.matches));
   }
 }
